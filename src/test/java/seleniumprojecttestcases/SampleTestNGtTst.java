@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SampleTestNGtTst {
 
-	    public static void main(String arg[]) {
+	    public static void main(String arg[]) throws InterruptedException {
 	    	
 		//WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
@@ -19,6 +19,9 @@ public class SampleTestNGtTst {
 		driver.findElement(By.xpath("//textarea[@id='APjFqb']")).sendKeys("Testing");
 		String title = driver.getTitle();
 		System.out.println(title);
+		
+		Thread.sleep(2000);
+		driver.close();
 		
 	}
 	
